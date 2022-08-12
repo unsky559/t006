@@ -1,5 +1,13 @@
 :root {
-  --color-background: #F9F9F9;
+  --color-background: #F2F2F2;
+  --color-background-light: #ffffff;
+  --color-background-card: #EFEFEF;
+  --color-background-section: #F9F9F9;
+
+  --color-font-primary: #00284F;
+  --color-font-secondary: rgba(0,40,79,0.4);
+
+  --cubic-function: cubic-bezier(.32,.32,0,1);
 }
 
 *,
@@ -11,10 +19,26 @@
   font-weight: normal;
 }
 
+.container{
+  min-width: 370px;
+  max-width: 1440px;
+  padding-left: 25px;
+  padding-right: 25px;
+  width: 100%;
+  margin: 0 auto;
+
+}
+
+.textSecondary{
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--color-font-secondary);
+}
+
 body {
   min-height: 100vh;
   background: var(--color-background);
-  font-family: "Gilroy";
+  font-family: "Gilroy", serif;
   font-weight: 700;
   font-size: 15px;
   text-rendering: optimizeLegibility;

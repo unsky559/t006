@@ -1,0 +1,91 @@
+<script lang="ts">
+import ButtonCircle from "@/components/ButtonCircle.vue";
+import IconMenu from "@/components/icons/IconMenu.vue";
+import IconSearch from "@/components/icons/IconSearch.vue";
+import IconUser from "@/components/icons/IconUser.vue";
+import UserCart from "@/components/icons/IconCart.vue";
+import LogoComponent from "@/components/LogoComponent.vue";
+
+export default {
+  components: {
+    ButtonCircle,
+    IconMenu,
+    IconSearch,
+    IconUser,
+    UserCart,
+    LogoComponent,
+  },
+  emits: ["menuClick"],
+};
+</script>
+<template>
+  <header class="header">
+    <div class="container">
+      <div class="header_controls">
+        <div class="controls_combine">
+          <ButtonCircle @click="$emit('menuClick')">
+            <IconMenu />
+          </ButtonCircle>
+          <ButtonCircle>
+            <IconSearch />
+          </ButtonCircle>
+        </div>
+        <LogoComponent />
+        <div class="controls_combine">
+          <ButtonCircle>
+            <IconUser />
+          </ButtonCircle>
+          <ButtonCircle>
+            <UserCart />
+          </ButtonCircle>
+        </div>
+      </div>
+      <div class="header_links">
+        <ul class="links">
+          <li class="links_li links_li__active">Омега-3</li>
+          <li class="links_li">Витамины</li>
+          <li class="links_li">Добавки</li>
+          <li class="links_li">О нас</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="header_links"></div>
+  </header>
+</template>
+
+<style scoped>
+.header {
+  background: var(--color-background-light);
+}
+.header_controls {
+  padding-top: 50px;
+  padding-bottom: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.controls_combine {
+  display: flex;
+}
+
+.links {
+  padding: 0;
+  display: flex;
+  padding: 12px;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+}
+.links_li {
+  white-space: nowrap;
+  list-style: none;
+  margin-right: 30px;
+  font-size: 16px;
+}
+.links_li:last-child {
+  margin-right: 0;
+}
+.links_li__active {
+  font-weight: bold;
+}
+</style>
