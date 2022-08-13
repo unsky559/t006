@@ -45,7 +45,7 @@ export default {
           <li class="links_li links_li__active"><a href="#">Омега-3</a></li>
           <li class="links_li"><a href="#">Витамины</a></li>
           <li class="links_li"><a href="#">Добавки</a></li>
-          <li class="links_li"><a href="#">Доставка</a></li>
+          <li class="links_li mobile_hide"><a href="#">Доставка</a></li>
           <li class="links_li"><a href="#">О нас</a></li>
         </ul>
       </div>
@@ -92,22 +92,21 @@ export default {
 }
 
 @media (min-width: 720px) {
-  .links{
+  .links {
     justify-content: center;
   }
-  .links_li{
+  .links_li {
     margin-right: 52px;
   }
-  .header_controls{
+  .header_controls {
     padding-top: 26px;
     padding-bottom: 26px;
   }
-  .links{
+  .links {
     padding-bottom: 24px;
   }
-  .controls_combine > *:not(:last-child){
+  .controls_combine > *:not(:last-child) {
     margin-right: 25px;
   }
 }
-
 </style>

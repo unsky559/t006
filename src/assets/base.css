@@ -37,6 +37,12 @@
   color: var(--color-font-secondary);
 }
 
+@media (max-width: 720px) {
+  .mobile_hide{
+    display: none;
+  }
+}
+
 a{
   color: inherit;
   text-decoration: none;
