@@ -42,11 +42,11 @@ export default {
       </div>
       <div class="header_links">
         <ul class="links">
-          <li class="links_li links_li__active">Омега-3</li>
-          <li class="links_li">Витамины</li>
-          <li class="links_li">Добавки</li>
-          <li class="links_li">Доставка</li>
-          <li class="links_li">О нас</li>
+          <li class="links_li links_li__active"><a href="#">Омега-3</a></li>
+          <li class="links_li"><a href="#">Витамины</a></li>
+          <li class="links_li"><a href="#">Добавки</a></li>
+          <li class="links_li"><a href="#">Доставка</a></li>
+          <li class="links_li"><a href="#">О нас</a></li>
         </ul>
       </div>
     </div>

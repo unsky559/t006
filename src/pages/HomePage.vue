@@ -9,18 +9,19 @@ export default {
 <template>
   <div class="row">
     <div class="container">
+
       <aside class="section asideLinks">
         <h2 class="textSecondary">Популярное в этой категории</h2>
         <ul class="linklist">
-          <li class="linklist_link">Коллаген</li>
-          <li class="linklist_link">Омега-3</li>
-          <li class="linklist_link">Витамин Д3</li>
-          <li class="linklist_link">Сквален</li>
-          <li class="linklist_link">Витамины для детей</li>
+          <li class="linklist_link"><a href="#">Коллаген</a></li>
+          <li class="linklist_link"><a href="#">Омега-3</a></li>
+          <li class="linklist_link"><a href="#">Витамин Д3</a></li>
+          <li class="linklist_link"><a href="#">Сквален</a></li>
+          <li class="linklist_link"><a href="#">Витамины для детей</a></li>
         </ul>
       </aside>
-      <section class="section popular">
 
+      <section class="section popular">
         <h2 class="textSecondary">Популярное в этой категории</h2>
         <div class="cardList">
           <Card />
@@ -28,9 +29,8 @@ export default {
           <Card />
           <Card />
         </div>
-
-
       </section>
+
     </div>
   </div>
 

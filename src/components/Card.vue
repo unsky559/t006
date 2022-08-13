@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <div class="card" tabindex="0">
     <div class="card_imageContainer">
       <img class="card_image" src="../assets/mock/1_cod%202.png" alt="" />
     </div>
