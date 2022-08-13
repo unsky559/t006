@@ -36,7 +36,7 @@ export default {
             <IconUser />
           </ButtonCircle>
           <ButtonCircle>
-            <UserCart />
+            <UserCart :hasNotify="true" />
           </ButtonCircle>
         </div>
       </div>
