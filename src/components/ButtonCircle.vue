@@ -1,7 +1,7 @@
 <script>
-  export default {
-    props: ['tabindex']
-  }
+export default {
+  props: ["tabindex"],
+};
 </script>
 
 <template>
@@ -20,15 +20,13 @@ button {
   align-items: center;
   justify-content: center;
   padding: 11px;
-  border-radius: 50%;
 }
 .circleBtn:hover {
-  background: var(--color-background);
   cursor: pointer;
 }
 
 @media (min-width: 720px) {
-  .circleBtn{
+  .circleBtn {
     padding: 5px;
   }
 }

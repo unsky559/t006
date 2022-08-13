@@ -21,8 +21,16 @@
   </svg>
 </template>
 <style scoped>
+button:hover * {
+  stroke: var(--color-accent);
+}
+
+svg * {
+  transition: 0.3s;
+}
+
 @media (min-width: 720px) {
-  svg{
+  svg {
     width: 26px;
     height: 26px;
   }
