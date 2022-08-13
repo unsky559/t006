@@ -45,6 +45,7 @@ export default {
           <li class="links_li links_li__active">Омега-3</li>
           <li class="links_li">Витамины</li>
           <li class="links_li">Добавки</li>
+          <li class="links_li">Доставка</li>
           <li class="links_li">О нас</li>
         </ul>
       </div>
@@ -81,6 +82,7 @@ export default {
   list-style: none;
   margin-right: 30px;
   font-size: 16px;
+  color: var(--color-font-primary);
 }
 .links_li:last-child {
   margin-right: 0;
@@ -88,4 +90,24 @@ export default {
 .links_li__active {
   font-weight: bold;
 }
+
+@media (min-width: 720px) {
+  .links{
+    justify-content: center;
+  }
+  .links_li{
+    margin-right: 52px;
+  }
+  .header_controls{
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+  .links{
+    padding-bottom: 24px;
+  }
+  .controls_combine > *:not(:last-child){
+    margin-right: 25px;
+  }
+}
+
 </style>

@@ -15,7 +15,7 @@ export default {
   <transition name="side">
     <div v-if="!close" class="sideBar">
       <div class="sideBar_header">
-        <ButtonCircle @click="$emit('menuClose')">
+        <ButtonCircle @click="$emit('menuClose')" tabindex="1">
           <IconClose />
         </ButtonCircle>
       </div>
@@ -33,27 +33,33 @@ export default {
       </div>
     </div>
   </transition>
+  <transition name="side">
+    <div v-if="!close" class="background"></div>
+  </transition>
 </template>
 
 <style scoped>
-.side-enter-from {
-  transform: translateX(-100%);
-}
-.side-enter-active {
-  transition: transform 0.8s var(--cubic-function);
-}
-.side-enter-to {
-  transform: translateX(0%);
-}
-
+.side-enter-to,
 .side-leave-from {
   transform: translateX(0%);
 }
+.side-enter-active,
 .side-leave-active {
   transition: transform 0.8s var(--cubic-function);
 }
+
+ .side-enter-from,
 .side-leave-to {
   transform: translateX(-100%);
+}
+
+
+.background{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: var(--color-background-trans);
+  z-index: 1;
 }
 
 .sideBar {
@@ -62,7 +68,7 @@ export default {
   width: 100vw;
   height: 100vh;
   background: var(--color-background-light);
-  z-index: 1;
+  z-index: 2;
 
   display: flex;
   flex-direction: column;

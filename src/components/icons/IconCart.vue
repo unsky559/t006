@@ -12,3 +12,11 @@
     />
   </svg>
 </template>
+<style scoped>
+@media (min-width: 720px) {
+  svg{
+    width: 26px;
+    height: 26px;
+  }
+}
+</style>

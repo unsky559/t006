@@ -1,5 +1,11 @@
+<script>
+  export default {
+    props: ['tabindex']
+  }
+</script>
+
 <template>
-  <button class="circleBtn">
+  <button class="circleBtn" :tabindex="tabindex">
     <slot />
   </button>
 </template>
@@ -18,5 +24,12 @@ button {
 }
 .circleBtn:hover {
   background: var(--color-background);
+  cursor: pointer;
+}
+
+@media (min-width: 720px) {
+  .circleBtn{
+    padding: 5px;
+  }
 }
 </style>

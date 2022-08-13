@@ -47,4 +47,11 @@
   line-height: 15px;
   color: var(--color-font-secondary);
 }
+
+@media (min-width: 720px) {
+  .card{
+    min-width: calc(100%/4 - 24px);
+  }
+}
+
 </style>

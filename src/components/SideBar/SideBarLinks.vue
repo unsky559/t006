@@ -1,4 +1,4 @@
-<script lang="ts">
+<script lang="js">
 import IconCall from "@/components/icons/IconCall.vue";
 import IconArrowForward from "@/components/icons/IconArrowForward.vue";
 import IconArrowBack from "@/components/icons/IconArrowBack.vue";
@@ -46,6 +46,9 @@ export default {
       ],
     };
   },
+  mounted() {
+    this.$refs.back.focus();
+  },
   components: { IconArrowBack, IconArrowForward, IconCall },
 };
 </script>
@@ -56,6 +59,7 @@ export default {
       v-for="(page, pageIndex) in pages"
       :key="pageIndex"
       :style="{ transform: `translateX(${-100 * (pages.length - 1)}%)` }"
+      ref="back"
     >
       <div v-if="page.links" style="height: 100%">
         <button class="linkBack" v-if="pageIndex > 0" @click="pages.pop()">
@@ -75,7 +79,9 @@ export default {
               linklist_link__light: pageIndex,
             }"
           >
-            {{ link.text }}
+            <a href="#">
+              {{ link.text }}
+            </a>
 
             <ul v-if="link.links" class="linklist_sub">
               <li
@@ -88,11 +94,13 @@ export default {
                   })
                 "
               >
-                {{ subLink.text }}
+                <a href="#">
+                  {{ subLink.text }}
+                  <span class="linklist_sub__icon">
+                    <IconArrowForward />
+                  </span>
+                </a>
 
-                <span class="linklist_sub__icon">
-                  <IconArrowForward />
-                </span>
               </li>
             </ul>
           </li>
@@ -101,9 +109,9 @@ export default {
 
       <template v-if="pageIndex === 0">
         <ul class="linklist">
-          <li class="linklist_link">Доставка и оплата</li>
-          <li class="linklist_link">Контакты</li>
-          <li class="linklist_link">Вакансии</li>
+          <li class="linklist_link"><a href="#">Доставка и оплата</a></li>
+          <li class="linklist_link"><a href="#">Контакты</a></li>
+          <li class="linklist_link"><a href="#">Вакансии</a></li>
         </ul>
 
         <div class="sideBar_contact">
@@ -167,6 +175,9 @@ export default {
   border: none;
 
   padding: 6px 0;
+}
+.linkBack:hover{
+  cursor: pointer;
 }
 .linkBack_icon {
   margin-right: 25px;

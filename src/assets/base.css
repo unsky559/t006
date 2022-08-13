@@ -4,6 +4,8 @@
   --color-background-card: #EFEFEF;
   --color-background-section: #F9F9F9;
 
+  --color-background-trans: rgba(237,237,237,.5);
+
   --color-font-primary: #00284F;
   --color-font-secondary: rgba(0,40,79,0.4);
 
@@ -21,7 +23,7 @@
 
 .container{
   min-width: 370px;
-  max-width: 1440px;
+  max-width: 1500px;
   padding-left: 25px;
   padding-right: 25px;
   width: 100%;
@@ -33,6 +35,13 @@
   font-size: 15px;
   font-weight: 500;
   color: var(--color-font-secondary);
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+  font-weight: inherit;
+  display: inherit;
 }
 
 body {
