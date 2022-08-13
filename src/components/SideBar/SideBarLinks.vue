@@ -46,9 +46,6 @@ export default {
       ],
     };
   },
-  mounted() {
-    this.$refs.back.focus();
-  },
   components: { IconArrowBack, IconArrowForward, IconCall },
 };
 </script>
@@ -59,7 +56,6 @@ export default {
       v-for="(page, pageIndex) in pages"
       :key="pageIndex"
       :style="{ transform: `translateX(${-100 * (pages.length - 1)}%)` }"
-      ref="back"
     >
       <div v-if="page.links" style="height: 100%">
         <button class="linkBack" v-if="pageIndex > 0" @click="pages.pop()">
@@ -100,7 +96,6 @@ export default {
                     <IconArrowForward />
                   </span>
                 </a>
-
               </li>
             </ul>
           </li>
@@ -176,7 +171,7 @@ export default {
 
   padding: 6px 0;
 }
-.linkBack:hover{
+.linkBack:hover {
   cursor: pointer;
 }
 .linkBack_icon {
