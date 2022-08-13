@@ -4,10 +4,18 @@ import IconClose from "@/components/icons/IconClose.vue";
 import Dropdown from "@/components/Dropdown.vue";
 import SideBarLinks from "@/components/SideBar/SideBarLinks.vue";
 
+
 export default {
   components: { ButtonCircle, IconClose, Dropdown, SideBarLinks },
   props: ["close"],
-  emits: ["menuClose"]
+  emits: ["menuClose"],
+  mounted() {
+    document.addEventListener("keydown", (e) => {
+      if (e.keyCode === 27) {
+        this.$emit('menuClose');
+      }
+    });
+  },
 };
 </script>
 
@@ -34,7 +42,7 @@ export default {
     </div>
   </transition>
   <transition name="side">
-    <div v-if="!close" class="background"></div>
+    <div v-if="!close" class="background" @click="$emit('menuClose')"></div>
   </transition>
 </template>
 
