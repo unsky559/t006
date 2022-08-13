@@ -138,6 +138,7 @@ export default {
   position: relative;
   width: 100%;
   flex-grow: 1;
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   transition: transform 0.8s var(--cubic-function),

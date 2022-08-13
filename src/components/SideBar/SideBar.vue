@@ -101,8 +101,8 @@ export default {
   flex-grow: 1;
   overflow-y: auto;
   min-height: 200px;
-  flex-wrap: wrap;
-  flex-direction: column;
+  flex-wrap: nowrap;
+  flex-direction: row;
   overflow-x: hidden;
 }
 
