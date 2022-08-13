@@ -51,6 +51,7 @@ a{
 }
 
 body {
+  min-width: 375px;
   min-height: 100vh;
   background: var(--color-background);
   font-family: "Gilroy", serif;
