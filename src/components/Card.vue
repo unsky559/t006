@@ -1,7 +1,7 @@
 <template>
   <div class="card" tabindex="0">
     <div class="card_imageContainer">
-      <img class="card_image" src="../assets/mock/1_cod%202.png" alt="" />
+      <img class="card_image" src="../assets/mock/1_cod2.png" alt="" />
     </div>
     <div class="card_description">
       <div class="card_title">Омега-3 Тунец</div>
