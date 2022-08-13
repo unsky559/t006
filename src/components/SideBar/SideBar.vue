@@ -4,7 +4,6 @@ import IconClose from "@/components/icons/IconClose.vue";
 import Dropdown from "@/components/Dropdown.vue";
 import SideBarLinks from "@/components/SideBar/SideBarLinks.vue";
 
-
 export default {
   components: { ButtonCircle, IconClose, Dropdown, SideBarLinks },
   props: ["close"],
@@ -34,9 +33,15 @@ export default {
 
       <div class="sideBar_footer">
         <div class="sideBar_settings">
-          <Dropdown></Dropdown>
-          <Dropdown></Dropdown>
-          <Dropdown></Dropdown>
+          <Dropdown
+            title="Доставка"
+            :options="['Украина', 'Польша']"
+          ></Dropdown>
+          <Dropdown
+            title="Язык"
+            :options="['Русский', 'Українська', 'English']"
+          ></Dropdown>
+          <Dropdown title="Валюта" :options="['Грн', 'Zł', '$']"></Dropdown>
         </div>
       </div>
     </div>
@@ -56,13 +61,12 @@ export default {
   transition: transform 0.8s var(--cubic-function);
 }
 
- .side-enter-from,
+.side-enter-from,
 .side-leave-to {
   transform: translateX(-100%);
 }
 
-
-.background{
+.background {
   position: fixed;
   width: 100%;
   height: 100%;
